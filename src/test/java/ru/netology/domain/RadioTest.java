@@ -10,10 +10,10 @@ public class RadioTest {
     @Test
     public void shouldIncreaseCurrentStationBelowMaxStation() {
         Radio radio = new Radio();
-        int currentStation = radio.getMaxStation() - 1;
+        int currentStation = radio.getQuantityStation() - 1;
         radio.setCurrentStation(currentStation);
         radio.increaseStation();
-        int expected = radio.getMaxStation();
+        int expected = radio.getQuantityStation();
         int actual = radio.getCurrentStation();
         assertEquals(expected, actual);
     }
@@ -21,7 +21,7 @@ public class RadioTest {
     @Test
     public void shouldIncreaseCurrentStationEqualMaxStation() {
         Radio radio = new Radio();
-        int currentStation = radio.getMaxStation();
+        int currentStation = radio.getQuantityStation();
         radio.setCurrentStation(currentStation);
         radio.increaseStation();
         int expected = radio.getMinStation();
@@ -57,7 +57,7 @@ public class RadioTest {
         int currentStation = 0;
         radio.setCurrentStation(currentStation);
         radio.decreaseStation();
-        int expected = radio.getMaxStation();
+        int expected = radio.getQuantityStation();
         int actual = radio.getCurrentStation();
         assertEquals(expected, actual);
     }
@@ -65,10 +65,10 @@ public class RadioTest {
     @Test
     public void shouldDecreaseCurrentStationEqualMaxStation() {
         Radio radio = new Radio();
-        int currentStation = radio.getMaxStation();
+        int currentStation = radio.getQuantityStation();
         radio.setCurrentStation(currentStation);
         radio.decreaseStation();
-        int expected = radio.getMaxStation() - 1;
+        int expected = radio.getQuantityStation() -1;
         int actual = radio.getCurrentStation();
         assertEquals(expected, actual);
     }
@@ -76,7 +76,7 @@ public class RadioTest {
     @Test
     public void shouldReturnCurrentStationAboveMaxStation() {
         Radio radio = new Radio();
-        int currentStation = radio.getMaxStation() + 5;
+        int currentStation = radio.getQuantityStation() + 5;
         radio.setCurrentStation(currentStation);
         int expected = 0;
         int actual = radio.getCurrentStation();
@@ -160,10 +160,10 @@ public class RadioTest {
     @Test
     public void shouldSetMaxStation77() {
         Radio radio = new Radio(77);
-        int currentStation = radio.getMaxStation();
+        int currentStation = radio.getQuantityStation();
         radio.setCurrentStation(currentStation);
         int expected = 77;
-        int actual = radio.getMaxStation();
+        int actual = radio.getQuantityStation();
         assertEquals(expected, actual);
     }
 
