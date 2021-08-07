@@ -28,7 +28,7 @@ public class Radio {
         if (currentStation > minStation) {
             currentStation = currentStation - 1;
         } else {
-            currentStation = quantityStation;
+            currentStation = quantityStation - 1;
         }
     }
 

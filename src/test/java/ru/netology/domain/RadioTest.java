@@ -57,7 +57,7 @@ public class RadioTest {
         int currentStation = 0;
         radio.setCurrentStation(currentStation);
         radio.decreaseStation();
-        int expected = radio.getQuantityStation();
+        int expected = radio.getQuantityStation() - 1;
         int actual = radio.getCurrentStation();
         assertEquals(expected, actual);
     }
